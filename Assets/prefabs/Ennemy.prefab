@@ -99,7 +99,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: life
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 5494680431376316946}
   - component: {fileID: 5494680431376316947}
   - component: {fileID: 5336758084579822607}
+  - component: {fileID: 6583994726326481618}
   m_Layer: 0
   m_Name: Ennemy
   m_TagString: Ennemy
@@ -295,6 +296,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _finalPosition: {fileID: 7018955463696060313, guid: 050c241ebfe288c46affa326c2d923a0, type: 3}
   _speed: 5
+  _lifeText: {fileID: 8340624388999904923}
+  _hp: 40
+  _damage: 10
+  _attackSpeed: 0.5
 --- !u!54 &5494680431376316947
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -309,7 +314,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &5336758084579822607
 BoxCollider:
@@ -324,3 +329,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 1, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &6583994726326481618
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5494680431376316953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

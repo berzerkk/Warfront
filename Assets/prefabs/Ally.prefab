@@ -112,6 +112,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _finalPosition: {fileID: 8782233733580610003, guid: 25d3ccf910a6d69498e83d492411120a, type: 3}
   _speed: 10
+  _lifeText: {fileID: 1319830261641115478}
+  _hp: 40
+  _damage: 10
+  _attackSpeed: 0.5
 --- !u!54 &9028448534468824208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,7 +130,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &9004402352065668589
 GameObject:
@@ -227,7 +231,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: life
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
