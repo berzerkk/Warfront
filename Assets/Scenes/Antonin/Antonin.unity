@@ -152,7 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b8d5bb3fa178b409e9632706be2d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _simpleEnnemy: {fileID: 5494680431376316953, guid: b36a029bff22cbc4ab3294e55e49911e, type: 3}
+  _ennemis:
+  - {fileID: 5494680431376316953, guid: 74cd01fdb8bd1524da5b027c1dc52fdb, type: 3}
+  - {fileID: 5494680431376316953, guid: b36a029bff22cbc4ab3294e55e49911e, type: 3}
+  - {fileID: 5494680431376316953, guid: da190a6ce7e4f434191acb98ecc4bf62, type: 3}
+  _sizeGroupSpawn: 4
 --- !u!4 &126899733
 Transform:
   m_ObjectHideFlags: 0
