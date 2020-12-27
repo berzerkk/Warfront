@@ -13,7 +13,7 @@ public class EnnemisSpawner : MonoBehaviour {
 
     private void SpawnSimpleEnnemy () {
         for (int i = 0; i < _sizeGroupSpawn; i++) {
-            Instantiate (_ennemis[Random.Range (2, 3)], transform.position, Quaternion.identity);
+            Instantiate (_ennemis[Random.Range (2, 3)], new Vector3(transform.position.x + (i % 3), transform.position.y, transform.position.z + Mathf.Floor(i / 3)), Quaternion.identity);
         }
     }
 }
