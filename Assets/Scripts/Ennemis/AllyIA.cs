@@ -16,6 +16,7 @@ public class AllyIA : MonoBehaviour {
     public float _hp = 40f;
     public float _damage = 10f;
     public float _attackSpeed = 1f;
+        public float _range = 1f;
     //  public float _moveSpeed = 10;
 
     private float _timeBeforeAttack = 0f;
@@ -23,7 +24,7 @@ public class AllyIA : MonoBehaviour {
     void Start () { }
     void Update () {
         if (_target != null) { // si ennemi à portée
-            if (Vector3.Distance (transform.position, _target.transform.position) > 1f)
+            if (Vector3.Distance (transform.position, _target.transform.position) > _range)
                 transform.position = Vector3.MoveTowards (transform.position, _target.transform.position, _speed * Time.deltaTime);
             AttackTarget ();
         } else {

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnnemisSpawner : MonoBehaviour {
     [SerializeField]
-    private GameObject _simpleEnnemy;
+    private GameObject[] _ennemis;
+    public int _sizeGroupSpawn = 4;
 
     void Start () {
-        InvokeRepeating ("SpawnSimpleEnnemy", 3f, 3f);
+        InvokeRepeating ("SpawnSimpleEnnemy", 2f, 5f);
     }
 
     private void SpawnSimpleEnnemy () {
-        Instantiate (_simpleEnnemy, transform.position, Quaternion.identity);
+        for (int i = 0; i < _sizeGroupSpawn; i++) {
+            Instantiate (_ennemis[Random.Range (2, 3)], transform.position, Quaternion.identity);
+        }
     }
 }
