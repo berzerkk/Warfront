@@ -20,11 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5797f9ba-1ecc-49cc-a5f6-c7cc9ed9ba84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FloatingText.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FloatingText.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spells.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spells/Fireball.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Spells/Fireball.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/PlayerUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/PlayerUI.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResourceController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/InventoryController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/InventoryController.cs" />
       </list>
     </option>
   </component>
@@ -85,7 +90,8 @@
       <option name="presentableId" value="Default" />
       <updated>1609000829963</updated>
       <workItem from="1609000847244" duration="241000" />
-      <workItem from="1609001511651" duration="1077000" />
+      <workItem from="1609001511651" duration="1120000" />
+      <workItem from="1609024090794" duration="4020000" />
     </task>
     <servers />
   </component>
@@ -104,11 +110,16 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="877" y="302" key="RiderGenerateDialog" timestamp="1609024713815">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="877" y="302" key="RiderGenerateDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1609024713815" />
     <state x="528" y="165" key="SettingsEditor" timestamp="1609001844250">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
