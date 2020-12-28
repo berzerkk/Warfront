@@ -20,24 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5797f9ba-1ecc-49cc-a5f6-c7cc9ed9ba84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponSwitching.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/WeaponSwitching.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/axe/Chop.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/axe/Chop.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ghislain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ghislain.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FarmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FarmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/FarmController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/FarmController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ResourceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ResourceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/ResourceController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/ResourceController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/FarmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/FarmController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/FarmController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/FarmController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ResourceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ResourceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ResourceController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ResourceController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/PlayerUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/PlayerUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Spells/fireball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Spells/fireball.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +38,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InventoryController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/InventoryController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/WeaponSwitching.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FarmController.cs" />
       </list>
     </option>
   </component>
@@ -101,7 +85,7 @@
       <workItem from="1609000847244" duration="241000" />
       <workItem from="1609001511651" duration="1120000" />
       <workItem from="1609024090794" duration="4587000" />
-      <workItem from="1609105983319" duration="4186000" />
+      <workItem from="1609105983319" duration="4206000" />
     </task>
     <servers />
   </component>
