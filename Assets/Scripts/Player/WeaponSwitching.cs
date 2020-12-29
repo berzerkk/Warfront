@@ -35,7 +35,7 @@ public class WeaponSwitching : MonoBehaviour
         }
         else if(Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            if (currentWeapon - 1 > 0)
+            if (currentWeapon - 1 >= 0)
             {
                 currentWeapon--;
             }
