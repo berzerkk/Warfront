@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4316741214201823708}
   - component: {fileID: 666675653942524665}
+  - component: {fileID: 4603319832281571092}
+  - component: {fileID: 7606835111277621785}
+  - component: {fileID: 1083291253968605739}
   m_Layer: 0
   m_Name: PlayerScripts
   m_TagString: Untagged
@@ -48,3 +51,50 @@ MonoBehaviour:
   playerSpeed: 5
   yawRotationSpeed: 360
   pitchRotationSpeed: 360
+--- !u!114 &4603319832281571092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316741214201823710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b97847b3147e8b74383938cabe558c04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7606835111277621785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316741214201823710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da94cbc4a087aa647bcce1f201ec1844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeapon: 0
+  maxWeapons: 4
+  staffBar: {fileID: 0}
+  weapons: {fileID: 0}
+  weaponsUI: {fileID: 0}
+  weaponsAbilitiesBar: {fileID: 0}
+  theAnimator: {fileID: 0}
+--- !u!114 &1083291253968605739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4316741214201823710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef7977d4d89bd7c4b9ab05561f5e8723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  woodCounter: {fileID: 0}
+  ironCounter: {fileID: 0}
+  wood: 100
+  iron: 100
