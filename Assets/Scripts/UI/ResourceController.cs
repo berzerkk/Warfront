@@ -6,11 +6,9 @@ public class ResourceController : MonoBehaviour
 {
     public TextMeshProUGUI woodCounter;
     public TextMeshProUGUI ironCounter;
-    public int wood = 100;
-    public int iron = 100;
     private void Update()
     {
-        woodCounter.text = wood.ToString();
-        ironCounter.text = iron.ToString();
+        woodCounter.text = SavedVariables.woodCounter.ToString();
+        ironCounter.text = SavedVariables.ironCounter.ToString();
     }
 }

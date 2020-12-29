@@ -6,21 +6,19 @@ using UnityEngine.SocialPlatforms;
 
 public class TreeController : MonoBehaviour
 {
-    private int treeHealth = 5;
+    public int treeHealth = 5;
+    public GameObject woodCounter;
 
-
-    public TextMeshPro woodCounter;
-    public GameObject tree;
     // Start is called before the first frame update
     void Start()
     {
-        tree = this.gameObject;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (treeHealth <= 0)
+        if (treeHealth == 0)
         {
             DestroyTree();
         }
@@ -28,8 +26,7 @@ public class TreeController : MonoBehaviour
 
     void DestroyTree()
     {
-        Destroy(tree);
-
-        woodCounter.text = "Youpi le bois";
+        SavedVariables.woodCounter += 5;
+        Destroy(this.gameObject);
     }
 }

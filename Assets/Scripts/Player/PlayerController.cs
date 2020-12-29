@@ -84,8 +84,9 @@ public class PlayerController : MonoBehaviour {
     private void OnEnable () {
         _lastMousePosition = Input.mousePosition;
     }
-
+/*
     private void OnDisable () {
         playerEyesTransform.localRotation = Quaternion.identity;
     }
+*/
 }
