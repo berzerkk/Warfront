@@ -8,10 +8,12 @@ public class Projectile : MonoBehaviour {
     public float _damage = 10f;
     [SerializeField]
     private float _speed = 5f;
+
+    private 
     void Update () {
         if (_targetedProjectile == true && _target == null) {
             Destroy (this.gameObject);
-        } else if (_targetedProjectile == true) {
+        } else if (_targetedProjectile == true) { // targeted spell routine
             transform.position = Vector3.MoveTowards (transform.position, _target.transform.position, _speed * Time.deltaTime);
             transform.rotation = Quaternion.LookRotation (Vector3.RotateTowards (transform.forward, _target.transform.position, _speed * Time.deltaTime, 0.0f));
             if (Vector3.Distance (transform.position, _target.transform.position) <= 1f) {
@@ -21,18 +23,8 @@ public class Projectile : MonoBehaviour {
                     _target.GetComponent<EnnemyIA> ().TakeDamage (_damage);
                 Destroy (this.gameObject);
             }
-        } else {
+        } else { // targeted spell routine
             Debug.Log ("not targeted spell instantiate");
         }
     }
-
-    // void OnTriggerEnter (Collider col) {
-    //     if (col.gameObject == _target && _target != null) {
-    //         if (_target.tag == "Ally")
-    //             _target.GetComponent<AllyIA> ().TakeDamage (_damage);
-    //         else if (_target.tag == "Ennemy")
-    //             _target.GetComponent<EnnemyIA> ().TakeDamage (_damage);
-    //         Destroy (this.gameObject);
-    //     }
-    // }
 }
