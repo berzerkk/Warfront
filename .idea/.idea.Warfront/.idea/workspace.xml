@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5797f9ba-1ecc-49cc-a5f6-c7cc9ed9ba84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/FarmController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/FarmController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Warfront/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Ghislain.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Ghislain.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,8 @@
       <workItem from="1609000847244" duration="241000" />
       <workItem from="1609001511651" duration="1120000" />
       <workItem from="1609024090794" duration="4587000" />
-      <workItem from="1609105983319" duration="4206000" />
+      <workItem from="1609105983319" duration="4856000" />
+      <workItem from="1609254064209" duration="533000" />
     </task>
     <servers />
   </component>

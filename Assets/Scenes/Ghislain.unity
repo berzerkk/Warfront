@@ -142,6 +142,14 @@ PrefabInstance:
       propertyPath: playerEyesTransform
       value: 
       objectReference: {fileID: 1092843916}
+    - target: {fileID: 1083291253968605739, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
+      propertyPath: woodCounter
+      value: 
+      objectReference: {fileID: 1964530497}
+    - target: {fileID: 1083291253968605739, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
+      propertyPath: ironCounter
+      value: 
+      objectReference: {fileID: 724624723}
     - target: {fileID: 4316741214201823708, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -190,6 +198,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerScripts
       objectReference: {fileID: 0}
+    - target: {fileID: 7606835111277621785, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
+      propertyPath: weapons
+      value: 
+      objectReference: {fileID: 701223330}
+    - target: {fileID: 7606835111277621785, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
+      propertyPath: weaponsUI
+      value: 
+      objectReference: {fileID: 1221469891}
+    - target: {fileID: 7606835111277621785, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
+      propertyPath: weaponsAbilitiesBar
+      value: 
+      objectReference: {fileID: 1188596514}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
 --- !u!1 &701223330 stripped
@@ -547,58 +567,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3483134585b583418264a32394ad5ef, type: 3}
---- !u!1 &1523009135 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4316741214201823710, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
-  m_PrefabInstance: {fileID: 173894645}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1523009138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523009135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b97847b3147e8b74383938cabe558c04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1523009139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523009135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da94cbc4a087aa647bcce1f201ec1844, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWeapon: 0
-  maxWeapons: 4
-  staffBar: {fileID: 0}
-  weapons: {fileID: 701223330}
-  weaponsUI: {fileID: 1221469891}
-  weaponsAbilitiesBar: {fileID: 1188596514}
-  theAnimator: {fileID: 0}
---- !u!114 &1523009140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523009135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef7977d4d89bd7c4b9ab05561f5e8723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  woodCounter: {fileID: 1964530497}
-  ironCounter: {fileID: 724624723}
-  wood: 100
-  iron: 100
 --- !u!90 &1555827839
 Avatar:
   m_ObjectHideFlags: 0
