@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Staff : PerformAction
+public class Bow : PerformAction
 {
-    public List<GameObject> _spells = new List<GameObject>();
-    private int _indexSpell = 0;
+    public GameObject _arrow;
 
     public override void Action() {
-        GameObject tmp = Instantiate(_spells[_indexSpell], transform.position, Quaternion.identity);
+        GameObject tmp = Instantiate(_arrow, transform.position, Quaternion.identity);
         tmp.GetComponent<Projectile>()._targetedProjectile = false;
         tmp.transform.rotation = this.transform.parent.parent.parent.parent.rotation;
         Destroy(tmp, 5f);

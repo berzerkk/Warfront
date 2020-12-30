@@ -7,9 +7,9 @@ public class Projectile : MonoBehaviour {
     public GameObject _target = null;
     public float _damage = 10f;
     [SerializeField]
-    private float _speed = 5f;
+    private float _speed = 5f; 
 
-    private 
+
     void Update () {
         if (_targetedProjectile == true && _target == null) {
             Destroy (this.gameObject);
@@ -24,6 +24,7 @@ public class Projectile : MonoBehaviour {
                 Destroy (this.gameObject);
             }
         } else { // targeted spell routine
+          transform.position +=  transform.rotation * Vector3.forward.normalized * 0.1f;
             Debug.Log ("not targeted spell instantiate");
         }
     }
