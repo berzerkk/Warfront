@@ -11,6 +11,7 @@ public class Staff : PerformAction
         GameObject tmp = Instantiate(_spells[_indexSpell], transform.position, Quaternion.identity);
         tmp.GetComponent<Projectile>()._targetedProjectile = false;
         tmp.transform.rotation = this.transform.parent.parent.parent.parent.rotation;
+        tmp.transform.rotation = Quaternion.Euler(transform.parent.parent.eulerAngles.x, tmp.transform.eulerAngles.y, tmp.transform.eulerAngles.z);
         Destroy(tmp, 5f);
     }
 }

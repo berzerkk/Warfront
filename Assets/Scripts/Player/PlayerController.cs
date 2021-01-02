@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour {
 
     void Start () {
         _weaponSwitching = GetComponent<WeaponSwitching> ();
+        // Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
     }
 
     private void Update () {
