@@ -41,7 +41,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4316741214201823710}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c3a10ececcb4103b7cd754a7d2b39f0, type: 3}
   m_Name: 
@@ -49,8 +49,13 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   playerEyesTransform: {fileID: 0}
   playerSpeed: 5
-  yawRotationSpeed: 360
-  pitchRotationSpeed: 360
+  yawRotationSpeed: 20
+  pitchRotationSpeed: 20
+  _tools:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &4603319832281571092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,5 +101,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   woodCounter: {fileID: 0}
   ironCounter: {fileID: 0}
-  wood: 100
-  iron: 100
