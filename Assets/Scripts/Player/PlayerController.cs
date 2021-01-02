@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour {
         _lastDirectionIntent = _lastDirectionIntent.normalized;
 
         if (Input.GetMouseButtonDown (0)) { // performe action depending on what player hold
-            _tools[_weaponSwitching.currentWeapon].GetComponent<PerformAction> ().Action ();
+            _tools[_weaponSwitching.currentWeapon].GetComponent<PerformAction>().Action ();
         }
 
         playerTransform.Rotate (0f, _lastRotationIntent * yawRotationSpeed * Time.fixedDeltaTime, 0f);
