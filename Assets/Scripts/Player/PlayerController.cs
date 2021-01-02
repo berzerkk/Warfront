@@ -25,11 +25,11 @@ public class PlayerController : MonoBehaviour {
 
     // Action depending on what player hold
     [SerializeField]
-    private List<GameObject> _tools = new List<GameObject>();
+    private List<GameObject> _tools = new List<GameObject> ();
     private WeaponSwitching _weaponSwitching;
 
-    void Start() {
-        _weaponSwitching = GetComponent<WeaponSwitching>();
+    void Start () {
+        _weaponSwitching = GetComponent<WeaponSwitching> ();
     }
 
     private void Update () {
@@ -59,11 +59,9 @@ public class PlayerController : MonoBehaviour {
         _lastDirectionIntent = _lastDirectionIntent.normalized;
 
         if (Input.GetMouseButtonDown (0)) { // performe action depending on what player hold
-            _tools[_weaponSwitching.currentWeapon].GetComponent<PerformAction>().Action();
+            _tools[_weaponSwitching.currentWeapon].GetComponent<PerformAction> ().Action ();
         }
-    }
 
-    private void FixedUpdate () {
         playerTransform.Rotate (0f, _lastRotationIntent * yawRotationSpeed * Time.fixedDeltaTime, 0f);
         playerEyesTransform.Rotate (-_lastPitchIntent * pitchRotationSpeed * Time.fixedDeltaTime, 0f, 0f);
 
@@ -76,7 +74,9 @@ public class PlayerController : MonoBehaviour {
             Mathf.Clamp (rotationX, -80f, 80f),
             0f,
             0f);
+    }
 
+    private void FixedUpdate () {
         playerTransform.position +=
             playerTransform.rotation * _lastDirectionIntent * (Time.fixedDeltaTime * playerSpeed);
     }
@@ -84,9 +84,9 @@ public class PlayerController : MonoBehaviour {
     private void OnEnable () {
         _lastMousePosition = Input.mousePosition;
     }
-/*
-    private void OnDisable () {
-        playerEyesTransform.localRotation = Quaternion.identity;
-    }
-*/
+    /*
+        private void OnDisable () {
+            playerEyesTransform.localRotation = Quaternion.identity;
+        }
+    */
 }

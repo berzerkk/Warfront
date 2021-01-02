@@ -7,15 +7,6 @@ using UnityEngine.SocialPlatforms;
 public class TreeController : MonoBehaviour
 {
     public int treeHealth = 5;
-    public GameObject woodCounter;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (treeHealth == 0)

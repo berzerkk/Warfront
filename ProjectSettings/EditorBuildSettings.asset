@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Antonin/Antonin.unity
     guid: 9e633302a66b0684dbc968f779a17a66
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Sample/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

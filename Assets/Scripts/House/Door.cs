@@ -18,10 +18,10 @@ public class Door : MonoBehaviour {
 
     void Update () { 
         if (_state == State.CLOSING) {
-            _mesh.transform.localRotation  = Quaternion.Euler(0, 0, 0);
+            _mesh.transform.localRotation  = Quaternion.Euler(-90, 0, 0);
             _state = State.CLOSE;
         } else if (_state == State.OPENING) {
-            _mesh.transform.localRotation  = Quaternion.Euler(0, 0, 90);
+            _mesh.transform.localRotation  = Quaternion.Euler(-90, 0, 90);
             _state = State.OPEN;
         }
     }

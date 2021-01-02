@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class Axe : PerformAction
 {
-
-    public TreeController treeScript;
-    public GameObject target = null;
+    private GameObject target = null;
     private Animator animator;
     private int damage = 0;
 
@@ -16,8 +14,7 @@ public class Axe : PerformAction
         animator = GetComponent<Animator>();
     }
 
-    public override void Action() { // fonction call quand la hache est équipée et qu'il y a un input clique gauche 
-        Debug.Log("coup de hache ^^");
+    public override void Action() {
         if (target != null)
         {
             animator.Play("Chop", 0);
