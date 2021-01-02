@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ennemy
   - Ally
+  - Tree
+  - Rock
   layers:
   - Default
   - TransparentFX

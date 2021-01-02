@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &5629920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -222,7 +221,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &46409149 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -246,44 +244,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &71897902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
   m_PrefabInstance: {fileID: 837732077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &73972180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 147630470355163262, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+  m_PrefabInstance: {fileID: 789349289}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &91944320 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1382075609665359970, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
   m_PrefabInstance: {fileID: 789349289}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &91944325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91944320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f0051cda47f2d498f399625bbdc1ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  treeScript: {fileID: 538694422}
-  target: {fileID: 0}
---- !u!65 &91944326
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91944320}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7783893, y: 2.1310844, z: 2.806403}
-  m_Center: {x: 1.615487, y: 0.5485208, z: -0.03765635}
 --- !u!1 &105289638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6788978694164167784, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -302,7 +277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &105289640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -456,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 666675653942524665, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
       propertyPath: _tools.Array.data[2]
       value: 
-      objectReference: {fileID: 1695223590}
+      objectReference: {fileID: 73972180}
     - target: {fileID: 666675653942524665, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
       propertyPath: _tools.Array.data[3]
       value: 
@@ -464,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 666675653942524665, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
       propertyPath: _tools.Array.data[4]
       value: 
-      objectReference: {fileID: 1819441539}
+      objectReference: {fileID: 925071194}
     - target: {fileID: 1083291253968605739, guid: 8950f3db4ca4da44596c6fcbde487a91, type: 3}
       propertyPath: woodCounter
       value: 
@@ -557,7 +531,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &185365144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -581,7 +554,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &231648763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -605,7 +577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &242893787 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -686,7 +657,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &267829843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -767,7 +737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &434150182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1024,7 +993,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &530184623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1110,7 +1078,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!1001 &562365317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1243,7 +1210,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &665828766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1267,7 +1233,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &695465827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1364,7 +1329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &738894056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1388,7 +1352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &749889350 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1483,16 +1446,32 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3353179563530398966, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3353179563530398966, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
       propertyPath: m_Avatar
       value: 
       objectReference: {fileID: 1555827839}
-    - target: {fileID: 3353179563530398966, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+    - target: {fileID: 3668024555836681822, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668024555836681822, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877095966359461974, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505260515924441836, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -108.056
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505260515924441836, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -71.444
+      objectReference: {fileID: 0}
+    - target: {fileID: 4505260515924441836, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -5.472
       objectReference: {fileID: 0}
     - target: {fileID: 4551609023916725220, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
       propertyPath: m_Name
@@ -1556,7 +1535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8906662682337344875, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8960482231243268827, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
       propertyPath: m_IsActive
@@ -1758,7 +1737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &852090298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1839,7 +1817,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &878398427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1863,11 +1840,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &901876647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
   m_PrefabInstance: {fileID: 1267518726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &925071194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3877095966359461974, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
+  m_PrefabInstance: {fileID: 789349289}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &926919071 stripped
 GameObject:
@@ -1887,7 +1868,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &926919073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1911,7 +1891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &982946757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -1935,7 +1914,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1015435844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -2021,7 +1999,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1162370478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -2102,16 +2079,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1166965096 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
   m_PrefabInstance: {fileID: 843258590}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1172072422 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6932779138420205647, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
-  m_PrefabInstance: {fileID: 1990821010}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1180894991
 GameObject:
@@ -2644,7 +2615,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1353345145 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -2725,7 +2695,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1396607089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -2749,7 +2718,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1452334391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -2773,7 +2741,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1461867588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -2911,7 +2878,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1554622361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3058,7 +3024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1574582899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3212,7 +3177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1659663105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3222,11 +3186,6 @@ Transform:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 1604443620513896184, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
   m_PrefabInstance: {fileID: 1990821010}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1695223590 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5012366718170999962, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
-  m_PrefabInstance: {fileID: 789349289}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695388189 stripped
 GameObject:
@@ -3246,7 +3205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1695388191 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3423,11 +3381,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
---- !u!1 &1819441539 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8960482231243268827, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
-  m_PrefabInstance: {fileID: 789349289}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1825399207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6788978694164167784, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3446,7 +3399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1825399209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3641,7 +3593,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1899457351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3722,7 +3673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1922303039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3746,7 +3696,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &1922356826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3757,7 +3706,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 380617103538849885, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
   m_PrefabInstance: {fileID: 1990821010}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1172072422}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -4070,7 +4019,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &2026138457 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -4265,7 +4213,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &2086169408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -4289,7 +4236,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &2102694033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -4313,7 +4259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeHealth: 5
-  woodCounter: {fileID: 1172072422}
 --- !u!4 &2127129429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -4387,6 +4332,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 48449084533232471, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
+      propertyPath: m_Center.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48449084533232471, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
+      propertyPath: m_Center.z
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5936538635365524237, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
+      propertyPath: m_Center.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5936538635365524237, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
+      propertyPath: m_Center.z
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 7812003804624610083, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
       propertyPath: m_Name
       value: Rocks
