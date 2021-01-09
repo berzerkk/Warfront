@@ -18,10 +18,17 @@ public class PlayerController : MonoBehaviour {
     [SerializeField]
     private float pitchRotationSpeed;
 
+    [SerializeField]
+    private float _accelerationRate = 10f;
+
     private Vector3 _lastDirectionIntent;
     private float _lastRotationIntent;
     private Vector2 _lastMousePosition;
     private float _lastPitchIntent;
+    private bool _sprint = false;
+
+    [SerializeField]
+    private PlayerPhysic _playerPhysic;
 
     // Action depending on what player hold
     [SerializeField]
@@ -44,6 +51,10 @@ public class PlayerController : MonoBehaviour {
 
         _lastMousePosition = Input.mousePosition;
 
+        _sprint = false;
+        if (Input.GetKey (KeyCode.LeftShift)) {
+            _sprint = true;
+        }
         if (Input.GetKey (KeyCode.D)) {
             _lastDirectionIntent += Vector3.right;
         }
@@ -61,8 +72,13 @@ public class PlayerController : MonoBehaviour {
         }
         _lastDirectionIntent = _lastDirectionIntent.normalized;
 
+        if (Input.GetKey (KeyCode.Space) && _playerPhysic._grounded) {
+            _playerPhysic._grounded = false;
+            playerTransform.gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, 100, 0), ForceMode.Impulse);
+        }
+
         if (Input.GetMouseButtonDown (0)) { // performe action depending on what player hold
-            _tools[_weaponSwitching.currentWeapon].GetComponent<PerformAction>().Action ();
+            _tools[_weaponSwitching.currentWeapon].GetComponent<PerformAction> ().Action ();
         }
 
         playerTransform.Rotate (0f, _lastRotationIntent * yawRotationSpeed * Time.fixedDeltaTime, 0f);
@@ -81,12 +97,13 @@ public class PlayerController : MonoBehaviour {
 
     private void FixedUpdate () {
         playerTransform.position +=
-            playerTransform.rotation * _lastDirectionIntent * (Time.fixedDeltaTime * playerSpeed);
+            playerTransform.rotation * _lastDirectionIntent * (Time.fixedDeltaTime * (_sprint ? playerSpeed * (1 + (_accelerationRate / 100)) : playerSpeed));
     }
 
     private void OnEnable () {
         _lastMousePosition = Input.mousePosition;
     }
+
     /*
         private void OnDisable () {
             playerEyesTransform.localRotation = Quaternion.identity;

@@ -20,6 +20,8 @@ public class Projectile : MonoBehaviour {
                     _target.GetComponent<AllyIA> ().TakeDamage (_damage);
                 else if (_target.tag == "Ennemy")
                     _target.GetComponent<EnnemyIA> ().TakeDamage (_damage);
+                else if (_target.tag == "Player")
+                    _target.GetComponent<PlayerStats> ().TakeDamage (_damage);
                 Destroy (this.gameObject);
             }
         } else { // targeted spell routine
