@@ -1445,18 +1445,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 3353179563530398966, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 1555827839}
-    - target: {fileID: 3668024555836681822, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3668024555836681822, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3877095966359461974, guid: 9011a8f6c0df61c4d86bf5d9bc9aadba, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2883,129 +2871,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6159970513430636242, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
   m_PrefabInstance: {fileID: 535200869}
   m_PrefabAsset: {fileID: 0}
---- !u!90 &1555827839
-Avatar:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Automatic Avatar
-  m_AvatarSize: 500
-  m_Avatar:
-    serializedVersion: 3
-    m_AvatarSkeleton:
-      data:
-        m_Node:
-        - m_ParentId: -1
-          m_AxesId: -1
-        m_ID: 00000000
-        m_AxesArray: []
-    m_AvatarSkeletonPose:
-      data:
-        m_X:
-        - t: {x: -0.25, y: -0.5, z: 0.51}
-          q: {x: -0.20765144, y: 0.24226537, z: 0.168247, w: 0.9326743}
-          s: {x: 0.5, y: 1, z: 1}
-    m_DefaultPose:
-      data:
-        m_X:
-        - t: {x: -0.25, y: -0.5, z: 0.51}
-          q: {x: -0.20765144, y: 0.24226537, z: 0.168247, w: 0.9326743}
-          s: {x: 0.5, y: 1, z: 1}
-    m_SkeletonNameIDArray: 00000000
-    m_Human:
-      data:
-        serializedVersion: 2
-        m_RootX:
-          t: {x: 0, y: 0, z: 0}
-          q: {x: 0, y: 0, z: 0, w: 1}
-          s: {x: 1, y: 1, z: 1}
-        m_Skeleton:
-          data:
-            m_Node: []
-            m_ID: 
-            m_AxesArray: []
-        m_SkeletonPose:
-          data:
-            m_X: []
-        m_LeftHand:
-          data:
-            m_HandBoneIndex: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-        m_RightHand:
-          data:
-            m_HandBoneIndex: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-        m_HumanBoneIndex: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-        m_HumanBoneMass:
-        - 0.14545456
-        - 0.12121213
-        - 0.12121213
-        - 0.048484854
-        - 0.048484854
-        - 0.009696971
-        - 0.009696971
-        - 0.030303033
-        - 0.14545456
-        - 0.14545456
-        - 0.012121214
-        - 0.048484854
-        - 0.006060607
-        - 0.006060607
-        - 0.024242427
-        - 0.024242427
-        - 0.01818182
-        - 0.01818182
-        - 0.006060607
-        - 0.006060607
-        - 0.0024242427
-        - 0.0024242427
-        - 0
-        - 0
-        - 0
-        m_Scale: 1
-        m_ArmTwist: 0.5
-        m_ForeArmTwist: 0.5
-        m_UpperLegTwist: 0.5
-        m_LegTwist: 0.5
-        m_ArmStretch: 0.05
-        m_LegStretch: 0.05
-        m_FeetSpacing: 0
-        m_HasLeftHand: 0
-        m_HasRightHand: 0
-        m_HasTDoF: 0
-    m_HumanSkeletonIndexArray: 
-    m_HumanSkeletonReverseIndexArray: 
-    m_RootMotionBoneIndex: -1
-    m_RootMotionBoneX:
-      t: {x: 0, y: 0, z: 0}
-      q: {x: 0, y: 0, z: 0, w: 1}
-      s: {x: 1, y: 1, z: 1}
-    m_RootMotionSkeleton:
-      data:
-        m_Node: []
-        m_ID: 
-        m_AxesArray: []
-    m_RootMotionSkeletonPose:
-      data:
-        m_X: []
-    m_RootMotionSkeletonIndexArray: 
-  m_TOS:
-    0: 
-  m_HumanDescription:
-    serializedVersion: 3
-    m_Human: []
-    m_Skeleton: []
-    m_ArmTwist: 0.5
-    m_ForeArmTwist: 0.5
-    m_UpperLegTwist: 0.5
-    m_LegTwist: 0.5
-    m_ArmStretch: 0.05
-    m_LegStretch: 0.05
-    m_FeetSpacing: 0
-    m_GlobalScale: 1
-    m_RootMotionBoneName: 
-    m_HasTranslationDoF: 0
-    m_HasExtraRoot: 0
-    m_SkeletonHasParents: 1
 --- !u!1 &1574582897 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6788978694164167784, guid: 45239ca65db5faa4a867a3a014a057a4, type: 3}
@@ -3811,6 +3676,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6100437696826690670, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6162749320109955252, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3909,6 +3778,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7660688947030133326, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8083860410901435596, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8181312707548585416, guid: edf7a3d1f503aed4e9a3af4ce225eb54, type: 3}
@@ -4332,22 +4205,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 48449084533232471, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
-      propertyPath: m_Center.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 48449084533232471, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
-      propertyPath: m_Center.z
-      value: -0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5936538635365524237, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
-      propertyPath: m_Center.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5936538635365524237, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
-      propertyPath: m_Center.z
-      value: -0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 7812003804624610083, guid: 600d617f686479c4dbe2d009d82286bc, type: 3}
       propertyPath: m_Name
       value: Rocks
