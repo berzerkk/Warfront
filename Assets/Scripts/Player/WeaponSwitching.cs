@@ -7,11 +7,10 @@ public class WeaponSwitching : MonoBehaviour
     public int currentWeapon = 0;
 
     public int maxWeapons = 4;
-    public GameObject staffBar;
     public GameObject weapons;
     public GameObject weaponsUI;
+
     public GameObject weaponsAbilitiesBar;
-    public Animator theAnimator;
     // Start is called before the first frame update
     void Awake()
     {
