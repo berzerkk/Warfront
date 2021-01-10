@@ -20,6 +20,9 @@ public class EnnemyIA : MonoBehaviour {
     private float _timeBeforeAttack = 0f;
     private UnityEngine.AI.NavMeshAgent _agent;
 
+    private Vector3 _positionBeforeTarget;
+    public bool _reset = false;
+
     private List<Transform> _targets = new List<Transform> ();
 
     void Start () {
@@ -29,16 +32,29 @@ public class EnnemyIA : MonoBehaviour {
     void Update () {
         // todo synthetise this
         Transform tmp;
-        tmp = FindTarget ();
-        if (tmp != null)
-            SetupNewTarget (tmp.gameObject);
-            
+        if (!_reset) {
+            tmp = FindTarget ();
+            if (tmp != null)
+                SetupNewTarget (tmp.gameObject);
+        }
+
         AttackTarget ();
-        if (_target == null) { // run a la base ennemie
-            _agent.stoppingDistance = 0f;
-            _agent.destination = _finalPosition.transform.position;
+        if (_target == null && !_reset) { // run a la base ennemie
+            GoToFinalPosition ();
             if (Vector3.Distance (transform.position, _finalPosition.transform.position) < 3f)
                 Destroy (this.gameObject);
+        } else if (_target != null && !_reset) {
+            if (Vector3.Distance (transform.position, _positionBeforeTarget) >= 20f) {
+                _agent.destination = _positionBeforeTarget;
+                _agent.stoppingDistance = 2f;
+                _reset = true;
+                _target = null;
+            } else
+                 _agent.destination = _target.transform.position;
+        }
+        if (_reset && Vector3.Distance (transform.position, _positionBeforeTarget) <= 2f) {
+            _reset = false;
+            GoToFinalPosition ();
         }
         // decremente temps avant prochaine attaque dispo
         _timeBeforeAttack -= (_timeBeforeAttack - Time.deltaTime > -1f ? Time.deltaTime : 0f);
@@ -54,9 +70,13 @@ public class EnnemyIA : MonoBehaviour {
         return _targets[0]; // Add intelligent targeting;
     }
 
+    private void GoToFinalPosition () {
+        _agent.stoppingDistance = 0f;
+        _agent.destination = _finalPosition.transform.position;
+    }
+
     public void AddTarget (Transform newTarget) {
         _targets.Add (newTarget);
-        // Debug.Log(_targets.Count);
     }
     public void RemoveTarget (Transform target) {
         if (_targets.Contains (target))
@@ -65,7 +85,6 @@ public class EnnemyIA : MonoBehaviour {
 
     private void AttackTarget () {
         if (_target != null && Vector3.Distance (transform.position, _target.transform.position) <= _range && _timeBeforeAttack <= 0f) {
-            // _target.GetComponent<AllyIA>().TakeDamage (_damage);  todo à l'impact du spell/attaque
             Fireball ();
             _timeBeforeAttack = _attackSpeed;
         }
@@ -79,6 +98,7 @@ public class EnnemyIA : MonoBehaviour {
     public void SetupNewTarget (GameObject target) {
         if (_target == null) {
             _target = target;
+            _positionBeforeTarget = transform.position;
             _agent.stoppingDistance = _range;
             _agent.destination = _target.transform.position;
         }
