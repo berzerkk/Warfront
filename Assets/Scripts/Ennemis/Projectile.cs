@@ -24,8 +24,8 @@ public class Projectile : MonoBehaviour {
                     _target.GetComponent<PlayerStats> ().TakeDamage (_damage);
                 Destroy (this.gameObject);
             }
-        } else { // targeted spell routine
-            transform.position += transform.rotation * Vector3.forward.normalized * 0.1f;
+        } else { // untargeted spell routine
+            transform.position += transform.rotation * Vector3.forward.normalized * (_speed * Time.deltaTime);
         }
     }
 

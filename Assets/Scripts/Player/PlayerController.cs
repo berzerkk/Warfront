@@ -23,38 +23,66 @@ public class PlayerController : MonoBehaviour {
 
     private Vector3 _lastDirectionIntent;
     private float _lastRotationIntent;
-    private Vector2 _lastMousePosition;
+    // private Vector2 _lastMousePosition;
     private float _lastPitchIntent;
     private bool _sprint = false;
 
     [SerializeField]
     private PlayerPhysic _playerPhysic;
+    [SerializeField]
+    private PlayerStats _playerStats;
+    [SerializeField]
+    private GameObject _sprintParticleObject;
+    private ParticleSystem _sprintParticleSystem;
+    // private ParticleSystem.EmissionModule _sprintEmission;
 
     // Action depending on what player hold
     [SerializeField]
     private List<GameObject> _tools = new List<GameObject> ();
     private WeaponSwitching _weaponSwitching;
 
+    public bool _menu = false;
+    public bool _escapeMenu = false;
+    public bool _map = false;
+
     void Start () {
         _weaponSwitching = GetComponent<WeaponSwitching> ();
-        // Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
+        SwitchCursorMode (true);
+        _sprintParticleSystem = _sprintParticleObject.GetComponent<ParticleSystem> ();
     }
 
     private void Update () {
+        if (Input.GetKeyDown (KeyCode.M) && !_escapeMenu) {
+            _map = !_map;
+            SwitchCursorMode (!_map);
+        }
+
+        if (Input.GetKeyDown (KeyCode.Escape)) {
+            _escapeMenu = !_escapeMenu;
+            SwitchCursorMode (!_escapeMenu);
+        }
         _lastDirectionIntent = Vector3.zero;
         _lastRotationIntent = 0.0f;
 
-        _lastRotationIntent = Input.mousePosition.x - _lastMousePosition.x;
-        _lastPitchIntent = Input.mousePosition.y - _lastMousePosition.y;
+        // _lastRotationIntent = Input.mousePosition.x - _lastMousePosition.x;
+        // _lastPitchIntent = Input.mousePosition.y - _lastMousePosition.y;
 
-        _lastMousePosition = Input.mousePosition;
+        _lastRotationIntent = Input.GetAxis ("Mouse X");
+        _lastPitchIntent = Input.GetAxis ("Mouse Y");
 
-        _sprint = false;
-        if (Input.GetKey (KeyCode.LeftShift)) {
+        //  _lastMousePosition = Input.mousePosition;
+
+        if (_map || _menu || _escapeMenu)
+            return;
+
+        if (Input.GetKey (KeyCode.LeftShift) && (_playerStats._stamina - (100f * Time.deltaTime) >= 0f)) {
+            _playerStats._stamina -= (100f * Time.deltaTime);
             _sprint = true;
-        }
+        } else
+            _sprint = false;
+        var em = _sprintParticleSystem.emission;
+        em.rateOverTime = (_sprint ? 20f : 0f);
+
         if (Input.GetKey (KeyCode.D)) {
             _lastDirectionIntent += Vector3.right;
         }
@@ -70,13 +98,8 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey (KeyCode.S)) {
             _lastDirectionIntent += Vector3.back;
         }
+
         _lastDirectionIntent = _lastDirectionIntent.normalized;
-
-        if (Input.GetKey (KeyCode.Space) && _playerPhysic._grounded) {
-            _playerPhysic._grounded = false;
-            playerTransform.gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, 100, 0), ForceMode.Impulse);
-        }
-
         if (Input.GetMouseButtonDown (0)) { // performe action depending on what player hold
             _tools[_weaponSwitching.currentWeapon].GetComponent<PerformAction> ().Action ();
         }
@@ -95,14 +118,23 @@ public class PlayerController : MonoBehaviour {
             0f);
     }
 
+    public void SwitchCursorMode (bool blocked) {
+        Cursor.lockState = (blocked ? CursorLockMode.Locked : CursorLockMode.None);
+        Cursor.visible = !blocked;
+    }
+
     private void FixedUpdate () {
+        if (Input.GetKey (KeyCode.Space) && _playerPhysic._grounded) { // move part of input on Update()
+            _playerPhysic._grounded = false;
+            playerTransform.gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, 100, 0), ForceMode.Impulse);
+        }
         playerTransform.position +=
             playerTransform.rotation * _lastDirectionIntent * (Time.fixedDeltaTime * (_sprint ? playerSpeed * (1 + (_accelerationRate / 100)) : playerSpeed));
     }
 
-    private void OnEnable () {
-        _lastMousePosition = Input.mousePosition;
-    }
+    // private void OnEnable () {
+    //     _lastMousePosition = Input.mousePosition;
+    // }
 
     /*
         private void OnDisable () {

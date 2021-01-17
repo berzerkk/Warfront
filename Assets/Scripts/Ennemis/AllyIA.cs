@@ -4,8 +4,9 @@ using TMPro;
 using UnityEngine;
 
 public class AllyIA : MonoBehaviour {
-    [SerializeField]
-    private GameObject _finalPosition;
+    public List<Transform> _path = new List<Transform> ();
+    private int _indexPath = 0;
+
     public GameObject _target = null;
     public TextMeshPro _lifeText;
     public GameObject _fireball; // todo voir pour changer la facon de drop un spell a un pnj
@@ -16,6 +17,7 @@ public class AllyIA : MonoBehaviour {
     public float _attackSpeed = 1f;
     public float _range = 1f;
     public float _speed = 1f;
+    public bool _melee = false;
 
     private float _timeBeforeAttack = 0f;
     private UnityEngine.AI.NavMeshAgent _agent;
@@ -33,15 +35,27 @@ public class AllyIA : MonoBehaviour {
             SetupNewTarget (tmp.gameObject);
         AttackTarget ();
         if (_target == null) { // run a la base ennemie
-            _agent.stoppingDistance = 0f;
-            _agent.destination = _finalPosition.transform.position;
-            if (Vector3.Distance (transform.position, _finalPosition.transform.position) < 3f)
-                Destroy (this.gameObject);
+            GoToNextStepPath ();
+            CheckForNextStepPath ();
         }
         // decremente temps avant prochaine attaque dispo
         _timeBeforeAttack -= (_timeBeforeAttack - Time.deltaTime > -1f ? Time.deltaTime : 0f);
         _lifeText.SetText (_hp.ToString ());
 
+    }
+
+    private void GoToNextStepPath () {
+        _agent.stoppingDistance = 1f;
+        _agent.destination = _path[_indexPath].position;
+    }
+    private void CheckForNextStepPath () {
+        if (Vector3.Distance (transform.position, _path[_indexPath].position) <= 5f) {
+            _indexPath++;
+            if (_indexPath >= 3)
+                Destroy (this.gameObject);
+            else
+                GoToNextStepPath ();
+        }
     }
 
     private Transform FindTarget () {
@@ -62,9 +76,13 @@ public class AllyIA : MonoBehaviour {
     }
 
     private void AttackTarget () {
+
         if (_target != null && Vector3.Distance (transform.position, _target.transform.position) <= _range && _timeBeforeAttack <= 0f) {
-            // _target.GetComponent<AllyIA>().TakeDamage (_damage);  todo à l'impact du spell/attaque
-            Fireball ();
+            if (_melee) {
+                 _target.GetComponent<EnnemyIA>().TakeDamage (_damage);
+            } else {
+                Fireball ();
+            }
             _timeBeforeAttack = _attackSpeed;
         }
     }

@@ -4875,7 +4875,7 @@ MonoBehaviour:
   _targetedProjectile: 1
   _target: {fileID: 0}
   _damage: 10
-  _speed: 10
+  _speed: 15
 --- !u!199 &3500347033296386970
 ParticleSystemRenderer:
   serializedVersion: 6

@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbec2fc5747b02d4dbcbf10731e1cf3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _finalPosition: {fileID: 7018955463696060313, guid: 050c241ebfe288c46affa326c2d923a0, type: 3}
+  _path: []
   _target: {fileID: 0}
   _lifeText: {fileID: 8340624388999904923}
   _fireball: {fileID: 7188873850973265452, guid: 2e8d55f7fc3535949bf007bf218de6e8, type: 3}
@@ -308,6 +308,7 @@ MonoBehaviour:
   _attackSpeed: 3
   _range: 10
   _speed: 4
+  _reset: 0
 --- !u!95 &6583994726326481618
 Animator:
   serializedVersion: 3
@@ -347,7 +348,7 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
-  m_WalkableMask: 1
+  m_WalkableMask: 24
   m_ObstacleAvoidanceType: 4
 --- !u!54 &-1749117652403335093
 Rigidbody:

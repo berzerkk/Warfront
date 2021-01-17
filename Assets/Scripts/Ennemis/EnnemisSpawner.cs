@@ -6,14 +6,28 @@ public class EnnemisSpawner : MonoBehaviour {
     [SerializeField]
     private GameObject[] _ennemis;
     public int _sizeGroupSpawn = 4;
-
+    [SerializeField]
+    private List<Transform> _leftPath = new List<Transform> ();
+    [SerializeField]
+    private List<Transform> _middlePath = new List<Transform> ();
+    [SerializeField]
+    private List<Transform> _rightPath = new List<Transform> ();
     void Start () {
-        InvokeRepeating ("SpawnSimpleEnnemy", 2f, 5f);
+        InvokeRepeating ("SpawnSimpleEnnemy", 2f, 10f);
     }
 
     private void SpawnSimpleEnnemy () {
-        for (int i = 0; i < _sizeGroupSpawn; i++) {
-            Instantiate (_ennemis[Random.Range (1, 3)], new Vector3 (transform.position.x + (i % 3), transform.position.y, transform.position.z + Mathf.Floor (i / 3)), Quaternion.identity);
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < _sizeGroupSpawn; j++) {
+                GameObject tmp = Instantiate (_ennemis[Random.Range (0, 3)], new Vector3 (transform.position.x + (j % 3), transform.position.y, transform.position.z + Mathf.Floor (j / 3)), Quaternion.identity);
+                if (i == 0) {
+                    tmp.GetComponent<EnnemyIA>()._path = _leftPath;
+                } else if (i == 1) {
+                    tmp.GetComponent<EnnemyIA>()._path = _middlePath;
+                } else {
+                    tmp.GetComponent<EnnemyIA>()._path = _rightPath;
+                }
+            }
         }
     }
 }

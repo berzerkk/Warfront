@@ -4,8 +4,9 @@ using TMPro;
 using UnityEngine;
 
 public class EnnemyIA : MonoBehaviour {
-    [SerializeField]
-    private GameObject _finalPosition;
+    public List<Transform> _path = new List<Transform> ();
+    private int _indexPath = 0;
+
     public GameObject _target = null;
     public TextMeshPro _lifeText;
     public GameObject _fireball; // todo voir pour changer la facon de drop un spell a un pnj
@@ -16,6 +17,7 @@ public class EnnemyIA : MonoBehaviour {
     public float _attackSpeed = 1f;
     public float _range = 1f;
     public float _speed = 1f;
+    public bool _melee = false;
 
     private float _timeBeforeAttack = 0f;
     private UnityEngine.AI.NavMeshAgent _agent;
@@ -40,9 +42,10 @@ public class EnnemyIA : MonoBehaviour {
 
         AttackTarget ();
         if (_target == null && !_reset) { // run a la base ennemie
-            GoToFinalPosition ();
-            if (Vector3.Distance (transform.position, _finalPosition.transform.position) < 3f)
-                Destroy (this.gameObject);
+            GoToNextStepPath ();
+            CheckForNextStepPath ();
+            // if (Vector3.Distance (transform.position, _finalPosition.transform.position) < 3f) // fix ça
+            //     Destroy (this.gameObject);
         } else if (_target != null && !_reset) {
             if (Vector3.Distance (transform.position, _positionBeforeTarget) >= 20f) {
                 _agent.destination = _positionBeforeTarget;
@@ -50,12 +53,14 @@ public class EnnemyIA : MonoBehaviour {
                 _reset = true;
                 _target = null;
             } else
-                 _agent.destination = _target.transform.position;
+                _agent.destination = _target.transform.position;
         }
         if (_reset && Vector3.Distance (transform.position, _positionBeforeTarget) <= 2f) {
             _reset = false;
-            GoToFinalPosition ();
+            GoToNextStepPath ();
+            CheckForNextStepPath ();
         }
+
         // decremente temps avant prochaine attaque dispo
         _timeBeforeAttack -= (_timeBeforeAttack - Time.deltaTime > -1f ? Time.deltaTime : 0f);
         _lifeText.SetText (_hp.ToString ());
@@ -70,9 +75,19 @@ public class EnnemyIA : MonoBehaviour {
         return _targets[0]; // Add intelligent targeting;
     }
 
-    private void GoToFinalPosition () {
-        _agent.stoppingDistance = 0f;
-        _agent.destination = _finalPosition.transform.position;
+    private void GoToNextStepPath () {
+        _agent.stoppingDistance = 1f;
+        _agent.destination = _path[_indexPath].position;
+    }
+    private void CheckForNextStepPath () {
+        if (Vector3.Distance (transform.position, _path[_indexPath].position) <= 5f) {
+            _indexPath++;
+            if (_indexPath >= 3)
+                Destroy (this.gameObject);
+            else
+                GoToNextStepPath ();
+
+        }
     }
 
     public void AddTarget (Transform newTarget) {
@@ -85,7 +100,15 @@ public class EnnemyIA : MonoBehaviour {
 
     private void AttackTarget () {
         if (_target != null && Vector3.Distance (transform.position, _target.transform.position) <= _range && _timeBeforeAttack <= 0f) {
-            Fireball ();
+            if (_melee) {
+                if (_target.tag == "Ally") {
+                _target.GetComponent<AllyIA> ().TakeDamage (_damage);
+                } else {
+                    Debug.Log("melee against player");
+                }
+            } else {
+                Fireball ();
+            }
             _timeBeforeAttack = _attackSpeed;
         }
     }

@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ddfe59e42d7a84d888eb500b05a3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _finalPosition: {fileID: 8782233733580610003, guid: 25d3ccf910a6d69498e83d492411120a, type: 3}
+  _path: []
   _target: {fileID: 0}
   _lifeText: {fileID: 8340624388999904923}
   _fireball: {fileID: 7188873850973265452, guid: 4a873800b2e273244b02ffb9fa83ba80, type: 3}
@@ -445,7 +445,8 @@ MonoBehaviour:
   _damage: 20
   _attackSpeed: 2
   _range: 10
-  _speed: 3
+  _speed: 4
+  _melee: 0
 --- !u!95 &6583994726326481618
 Animator:
   serializedVersion: 3

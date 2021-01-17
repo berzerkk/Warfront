@@ -15,4 +15,7 @@ public class ProgressiveBar : MonoBehaviour {
     public  void SetBarColor (Color healthColor) {
         _bar.color = healthColor;
     }
+    public void Active(bool state) {
+        GetComponent<Image>().enabled = state;
+    }
 }
