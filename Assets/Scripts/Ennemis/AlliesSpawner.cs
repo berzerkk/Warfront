@@ -19,6 +19,7 @@ public class AlliesSpawner : MonoBehaviour {
     private void SpawnSimpleAlly () {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < _sizeGroupSpawn + SavedVariables._additionnalAllySpawnPerWave; j++) {
+                //Spawn ally in line 
                 GameObject tmp = Instantiate (_allies[Random.Range (0, 3)], new Vector3 (transform.position.x + (j % 3), transform.position.y, transform.position.z + Mathf.Floor (j / 3)), Quaternion.identity);
                 if (i == 0) {
                     tmp.GetComponent<AllyIA> ()._path = _leftPath;

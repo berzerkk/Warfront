@@ -15,8 +15,8 @@ public class Sword : PerformAction {
     public override void Action () {
         if (_cdActual <= 0f) {
             _cdActual = _cdOriginal;
-            _animator.Play ("swing", 0);
-            _swing.Play();
+            _animator.Play ("swing", 0); //start the animation swing :)
+            _swing.Play(); //particle system play
             if (_targets.Count != 0) {
                 _targets.RemoveAll (item => item == null);
                 foreach (GameObject target in _targets) {

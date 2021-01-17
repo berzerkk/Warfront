@@ -118,8 +118,8 @@ public class PlayerController : MonoBehaviour {
             0f);
     }
 
-    public void SwitchCursorMode (bool blocked) {
-        Cursor.lockState = (blocked ? CursorLockMode.Locked : CursorLockMode.None);
+    public void SwitchCursorMode (bool blocked) { //Switch from invisible blocked cursor to visible movable cursor
+        Cursor.lockState = (blocked ? CursorLockMode.Locked : CursorLockMode.None); 
         Cursor.visible = !blocked;
     }
 
