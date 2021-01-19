@@ -48,6 +48,7 @@ public class AllyIA : MonoBehaviour {
         _agent.stoppingDistance = 1f;
         _agent.destination = _path[_indexPath].position;
     }
+    
     private void CheckForNextStepPath () {
         if (Vector3.Distance (transform.position, _path[_indexPath].position) <= 5f) {
             _indexPath++;

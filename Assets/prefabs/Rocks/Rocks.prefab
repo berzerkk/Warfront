@@ -51,9 +51,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7812003804624610084}
-  - component: {fileID: 48449084533232471}
   - component: {fileID: 5936538635365524237}
   - component: {fileID: 1555163279651073720}
+  - component: {fileID: 1662937433934409967}
   m_Layer: 0
   m_Name: Rocks
   m_TagString: Rock
@@ -78,19 +78,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &48449084533232471
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7812003804624610083}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 1, y: -5, z: -0.25}
 --- !u!65 &5936538635365524237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102,7 +89,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 2, y: 3, z: 2}
   m_Center: {x: 1, y: -5, z: -0.25}
 --- !u!114 &1555163279651073720
 MonoBehaviour:
@@ -117,6 +104,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rockHealth: 5
+--- !u!208 &1662937433934409967
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812003804624610083}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1, y: 1.5, z: 1}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 1, y: -5, z: -0.25}
+  m_TimeToStationary: 0.5
 --- !u!1001 &7812003804756435604
 PrefabInstance:
   m_ObjectHideFlags: 0
