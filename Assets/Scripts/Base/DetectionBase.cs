@@ -19,10 +19,10 @@ public class DetectionBase : MonoBehaviour {
     private PlayerStats _player;
 
     void Start () {
-
+        InvokeRepeating("FlagProgression", 0 , 1.0f);
     }
 
-    void Update () {
+    void FlagProgression () {
         Color color;
         _alliesList.RemoveAll (item => item == null);
         _ennemisList.RemoveAll (item => item == null);
