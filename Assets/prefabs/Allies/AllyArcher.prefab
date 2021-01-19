@@ -334,7 +334,6 @@ GameObject:
   - component: {fileID: 5494680431376316951}
   - component: {fileID: 5494680431376316950}
   - component: {fileID: 8657544961593070877}
-  - component: {fileID: 6583994726326481618}
   - component: {fileID: 8923256988793340486}
   - component: {fileID: -9046418269568723631}
   - component: {fileID: 9092107641057729976}
@@ -437,7 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ddfe59e42d7a84d888eb500b05a3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _finalPosition: {fileID: 8782233733580610003, guid: 25d3ccf910a6d69498e83d492411120a, type: 3}
+  _path: []
   _target: {fileID: 0}
   _lifeText: {fileID: 8340624388999904923}
   _fireball: {fileID: 7188873850973265452, guid: 2e8d55f7fc3535949bf007bf218de6e8, type: 3}
@@ -446,25 +445,7 @@ MonoBehaviour:
   _attackSpeed: 3
   _range: 20
   _speed: 4
---- !u!95 &6583994726326481618
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5494680431376316953}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  _melee: 0
 --- !u!195 &8923256988793340486
 NavMeshAgent:
   m_ObjectHideFlags: 0

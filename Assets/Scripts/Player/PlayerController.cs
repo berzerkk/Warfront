@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
     // private Vector2 _lastMousePosition;
     private float _lastPitchIntent;
     private bool _sprint = false;
+    public Transform _revivePosition;
 
     [SerializeField]
     private PlayerPhysic _playerPhysic;
@@ -118,13 +119,21 @@ public class PlayerController : MonoBehaviour {
             0f);
     }
 
-    public void SwitchCursorMode (bool blocked) { //Switch from invisible blocked cursor to visible movable cursor
-        Cursor.lockState = (blocked ? CursorLockMode.Locked : CursorLockMode.None); 
+    public void Revive() {
+        playerTransform.position = _revivePosition.position;
+        _playerStats._life = _playerStats._lifeMax;
+        _playerStats._mana = _playerStats._manaMax;
+        _playerStats._stamina = _playerStats._staminaMax;
+        _playerStats._dead = false;
+    }
+
+    public void SwitchCursorMode (bool blocked) {
+        Cursor.lockState = (blocked ? CursorLockMode.Locked : CursorLockMode.None);
         Cursor.visible = !blocked;
     }
 
     private void FixedUpdate () {
-        if (Input.GetKey (KeyCode.Space) && _playerPhysic._grounded) { // move part of input on Update()
+        if (!_map && !_menu && !_escapeMenu && Input.GetKey (KeyCode.Space) && _playerPhysic._grounded) { // move part of input on Update()
             _playerPhysic._grounded = false;
             playerTransform.gameObject.GetComponent<Rigidbody> ().AddForce (new Vector3 (0, 100, 0), ForceMode.Impulse);
         }

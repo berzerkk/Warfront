@@ -10,7 +10,8 @@ public class EnnemyIA : MonoBehaviour {
     public GameObject _target = null;
     public TextMeshPro _lifeText;
     public GameObject _fireball; // todo voir pour changer la facon de drop un spell a un pnj
-
+    [SerializeField] 
+    private ParticleSystem _damageParticle;
     // stats
     public float _hp = 40f;
     public float _damage = 10f;
@@ -129,6 +130,7 @@ public class EnnemyIA : MonoBehaviour {
 
     public void TakeDamage (float damage) {
         _hp -= damage;
+        _damageParticle.Play();
         if (_hp <= 0f)
             Destroy (this.gameObject);
     }

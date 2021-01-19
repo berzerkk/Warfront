@@ -27,6 +27,9 @@ public class AllyIA : MonoBehaviour {
     void Start () {
         _agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
         _agent.speed = _speed;
+        _hp *= (((float)SavedVariables._percentageLifeAlly + 100f) / 100f );
+        _damage *= (((float)SavedVariables._percentageDamageAlly + 100f) / 100f );
+              
     }
     void Update () {
         Transform tmp;

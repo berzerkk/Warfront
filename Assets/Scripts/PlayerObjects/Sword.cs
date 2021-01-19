@@ -14,13 +14,14 @@ public class Sword : PerformAction {
     }
     public override void Action () {
         if (_cdActual <= 0f) {
-            _cdActual = _cdOriginal;
-            _animator.Play ("swing", 0); //start the animation swing :)
-            _swing.Play(); //particle system play
+            _cdActual = _cdOriginal / ((SavedVariables._swordAttackSpeed + 100) / 100);
+            _animator.Play ("swing", 0);
+            _animator.speed = ((SavedVariables._swordAttackSpeed + 100) / 100);
+            _swing.Play();
             if (_targets.Count != 0) {
                 _targets.RemoveAll (item => item == null);
                 foreach (GameObject target in _targets) {
-                    target.GetComponent<EnnemyIA> ().TakeDamage (_damage);
+                    target.GetComponent<EnnemyIA> ().TakeDamage (_damage + SavedVariables._swordDamage);
                 }
             }
         }

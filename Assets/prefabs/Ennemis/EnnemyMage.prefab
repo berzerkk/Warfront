@@ -253,7 +253,6 @@ GameObject:
   - component: {fileID: 5494680431376316951}
   - component: {fileID: 5494680431376316950}
   - component: {fileID: 5494680431376316946}
-  - component: {fileID: 6583994726326481618}
   - component: {fileID: 8923256988793340486}
   - component: {fileID: -5339277213397504108}
   - component: {fileID: 7510107988319485697}
@@ -279,6 +278,7 @@ Transform:
   - {fileID: 7693282759496860941}
   - {fileID: 8771566372043030076}
   - {fileID: 1762066144324530401}
+  - {fileID: 2319322814544253339}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -360,6 +360,7 @@ MonoBehaviour:
   _target: {fileID: 0}
   _lifeText: {fileID: 8340624388999904923}
   _fireball: {fileID: 7188873850973265452, guid: 4a873800b2e273244b02ffb9fa83ba80, type: 3}
+  _damageParticle: {fileID: 4981781873169721622}
   _hp: 60
   _damage: 20
   _attackSpeed: 2
@@ -367,25 +368,6 @@ MonoBehaviour:
   _speed: 4
   _melee: 0
   _reset: 0
---- !u!95 &6583994726326481618
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5494680431376316953}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!195 &8923256988793340486
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -519,6 +501,73 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &6850717296035053406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5494680431376316949}
+    m_Modifications:
+    - target: {fileID: 3688320093181739466, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_Name
+      value: DamageParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.499
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+--- !u!4 &2319322814544253339 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9168555722627460805, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+  m_PrefabInstance: {fileID: 6850717296035053406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4981781873169721622 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1887143679555655240, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
+  m_PrefabInstance: {fileID: 6850717296035053406}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7876442348879602406
 PrefabInstance:
   m_ObjectHideFlags: 0
