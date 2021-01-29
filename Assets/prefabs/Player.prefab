@@ -163,14 +163,19 @@ MonoBehaviour:
   _lifeMax: 500
   _mana: 100
   _manaMax: 100
-  _manaRegen: 1
+  _manaRegen: 10
   _stamina: 100
-  _staminaRegen: 1
+  _staminaRegen: 10
   _staminaMax: 100
   _lifeBar: {fileID: 0}
   _manaBar: {fileID: 0}
   _staminaBar: {fileID: 0}
+  _lifeText: {fileID: 0}
+  _manaText: {fileID: 0}
+  _hurtEffect: {fileID: 0}
+  _deathScreen: {fileID: 0}
   _objectifUI: {fileID: 0}
+  _dead: 0
 --- !u!1 &882235467832064572
 GameObject:
   m_ObjectHideFlags: 0
@@ -10289,7 +10294,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 311
+    m_Bits: 130336
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -15357,6 +15362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _arrow: {fileID: 7188873850973265452, guid: 2e8d55f7fc3535949bf007bf218de6e8, type: 3}
+  _radiusArrow: 2.5
 --- !u!1 &8830525411338626584
 GameObject:
   m_ObjectHideFlags: 0

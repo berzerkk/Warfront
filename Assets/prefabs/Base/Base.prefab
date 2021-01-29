@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6883711915708911491}
   - component: {fileID: 6883711915708911493}
   - component: {fileID: 6883711915708911492}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Detection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 6883711915861297183}
   - component: {fileID: 6883711915861297182}
   - component: {fileID: 6883711915861297181}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Ennemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 6883711915968348477}
   - component: {fileID: 6883711915968348476}
   - component: {fileID: 6883711915968348475}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Ally
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 6883711916181648515}
   - component: {fileID: 6883711916181648517}
   - component: {fileID: 6883711916181648516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 6883711916477567560}
   - component: {fileID: 6883711916477567559}
   - component: {fileID: 6883711916477567558}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Progression
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6883711916493547117}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 6883711916750019756}
   - component: {fileID: 6883711916750019758}
   - component: {fileID: 6883711916750019757}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}

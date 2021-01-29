@@ -20,13 +20,13 @@ TagManager:
   - 
   - PostProcessing
   - Minimap
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Map
+  - Enemy
+  - Ally
+  - Player
+  - Ressources
+  - Spells
+  - Particle
   - 
   - 
   - 

@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000140257344042046}
   - component: {fileID: 1000140257344042047}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Sheep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,9 +164,37 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ennemy
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
       propertyPath: m_Name
       value: model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f62abc4388aa8c0429452887a4f51a05, type: 3}
