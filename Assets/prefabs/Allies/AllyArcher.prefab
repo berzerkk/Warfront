@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 5494680431376316949}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4313569486006938003
 MeshFilter:
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 413973890042130492}
   - component: {fileID: 8340624388999904923}
   - component: {fileID: 4517230400617365619}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,63 +264,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4d6e7d978f614890e205ca96b6fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &4825601989441751034
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1426674212430998420}
-  - component: {fileID: 6303264676224846609}
-  - component: {fileID: 6384028181954935554}
-  m_Layer: 0
-  m_Name: DetectionRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1426674212430998420
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825601989441751034}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5494680431376316949}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6303264676224846609
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825601989441751034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 1, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6384028181954935554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4825601989441751034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e6874262957e247aa1a4b58d4e5937, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5494680431376316953
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +280,7 @@ GameObject:
   - component: {fileID: 8923256988793340486}
   - component: {fileID: -9046418269568723631}
   - component: {fileID: 9092107641057729976}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AllyArcher
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -357,7 +300,6 @@ Transform:
   m_Children:
   - {fileID: 3338131454818770450}
   - {fileID: 5490731852498564846}
-  - {fileID: 1426674212430998420}
   - {fileID: 8588043079026723383}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -420,9 +362,9 @@ BoxCollider:
   m_GameObject: {fileID: 5494680431376316953}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 25, y: 25, z: 25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8657544961593070877
 MonoBehaviour:
@@ -440,12 +382,25 @@ MonoBehaviour:
   _target: {fileID: 0}
   _lifeText: {fileID: 8340624388999904923}
   _fireball: {fileID: 7188873850973265452, guid: 2e8d55f7fc3535949bf007bf218de6e8, type: 3}
+  _damageParticle: {fileID: 1887143679555655240, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
   _hp: 40
   _damage: 15
-  _attackSpeed: 3
-  _range: 20
-  _speed: 4
+  _attackSpeed: 1
+  _sightRange: 25
+  _attackRange: 25
+  _speed: 5
   _melee: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  whatIsTargetable:
+    serializedVersion: 2
+    m_Bits: 2048
+  _reset: 0
+  alreadyAttacked: 0
+  targetInSightRange: 0
+  targetInAttackRange: 0
+  _order: 1
 --- !u!195 &8923256988793340486
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -564,6 +519,18 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3b1730ff6f04be84fa2def05dba17c1b, type: 3}
       propertyPath: m_Name
       value: bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b1730ff6f04be84fa2def05dba17c1b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725361020413744197, guid: 3b1730ff6f04be84fa2def05dba17c1b, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276442123569471543, guid: 3b1730ff6f04be84fa2def05dba17c1b, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b1730ff6f04be84fa2def05dba17c1b, type: 3}

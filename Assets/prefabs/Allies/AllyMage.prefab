@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 413973890042130492}
   - component: {fileID: 8340624388999904923}
   - component: {fileID: 8609581829870322760}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,63 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed4d6e7d978f614890e205ca96b6fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &3012145069019575224
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 77399225095272887}
-  - component: {fileID: 2805925547641473022}
-  - component: {fileID: 6559580784701483311}
-  m_Layer: 0
-  m_Name: DetectionRange
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &77399225095272887
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3012145069019575224}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5494680431376316949}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2805925547641473022
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3012145069019575224}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 1, z: 20}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6559580784701483311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3012145069019575224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e6874262957e247aa1a4b58d4e5937, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4756234125910685716
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +213,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 5494680431376316949}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7218661734566653328
 MeshFilter:
@@ -337,7 +280,7 @@ GameObject:
   - component: {fileID: 8923256988793340486}
   - component: {fileID: 2013291700323337408}
   - component: {fileID: 5085585809425810489}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AllyMage
   m_TagString: Ally
   m_Icon: {fileID: 0}
@@ -357,7 +300,6 @@ Transform:
   m_Children:
   - {fileID: 3338131454818770450}
   - {fileID: 7693282759496860941}
-  - {fileID: 77399225095272887}
   - {fileID: 1215983986144179737}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -420,9 +362,9 @@ BoxCollider:
   m_GameObject: {fileID: 5494680431376316953}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 25, y: 25, z: 25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3589207041806985363
 MonoBehaviour:
@@ -440,12 +382,25 @@ MonoBehaviour:
   _target: {fileID: 0}
   _lifeText: {fileID: 8340624388999904923}
   _fireball: {fileID: 7188873850973265452, guid: 4a873800b2e273244b02ffb9fa83ba80, type: 3}
+  _damageParticle: {fileID: 1887143679555655240, guid: 654cbdc030e4a6d42ac7a86738800651, type: 3}
   _hp: 60
   _damage: 20
-  _attackSpeed: 2
-  _range: 10
-  _speed: 4
+  _attackSpeed: 1
+  _sightRange: 25
+  _attackRange: 25
+  _speed: 5
   _melee: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
+  whatIsTargetable:
+    serializedVersion: 2
+    m_Bits: 2048
+  _reset: 0
+  alreadyAttacked: 0
+  targetInSightRange: 0
+  targetInAttackRange: 0
+  _order: 1
 --- !u!195 &8923256988793340486
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -552,6 +507,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a61dd0614b0807499807b58a45b6a98, type: 3}
       propertyPath: m_Name
       value: magical_staff
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a61dd0614b0807499807b58a45b6a98, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a61dd0614b0807499807b58a45b6a98, type: 3}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6960908366495006027}
   - component: {fileID: 3500347033296386970}
   - component: {fileID: 7361229972791726921}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4855,7 +4855,7 @@ GameObject:
   - component: {fileID: 1319166098060143328}
   - component: {fileID: 6202216967515598780}
   - component: {fileID: 5113352750274997992}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: sonic wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}

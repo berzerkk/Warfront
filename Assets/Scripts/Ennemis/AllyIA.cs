@@ -1,57 +1,158 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 
 public class AllyIA : MonoBehaviour {
     public List<Transform> _path = new List<Transform> ();
     private int _indexPath = 0;
-
+    
     public GameObject _target = null;
     public TextMeshPro _lifeText;
     public GameObject _fireball; // todo voir pour changer la facon de drop un spell a un pnj
-
+    [SerializeField] 
+    private ParticleSystem _damageParticle;
     // stats
     public float _hp = 40f;
+    private float _initialhp;
     public float _damage = 10f;
     public float _attackSpeed = 1f;
-    public float _range = 1f;
+    public float _sightRange = 100f;
+    public float _attackRange = 1f;
     public float _speed = 1f;
-    public bool _melee = false;
-
+    public bool _melee = true;
     private float _timeBeforeAttack = 0f;
+    public LayerMask whatIsGround, whatIsTargetable;
     private UnityEngine.AI.NavMeshAgent _agent;
+    private Vector3 _positionBeforeTarget;
+    public bool _reset = false;
+    public bool alreadyAttacked;
+    public bool targetInSightRange, targetInAttackRange;
+    private List<GameObject> _targets = new List<GameObject> ();
+    public enum Order
+    {
+        Idle,
+        Attack,
+        Follow
+    };
+    public Order _order;
 
-    private List<Transform> _targets = new List<Transform> ();
-
-    void Start () {
+    void Awake () {
         _agent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
         _agent.speed = _speed;
-        _hp *= (((float)SavedVariables._percentageLifeAlly + 100f) / 100f );
-        _damage *= (((float)SavedVariables._percentageDamageAlly + 100f) / 100f );
-              
+        _positionBeforeTarget = this.transform.position;
+        _target = null;
+        _initialhp = _hp;
     }
-    void Update () {
-        Transform tmp;
-        tmp = FindTarget ();
-        if (tmp != null)
-            SetupNewTarget (tmp.gameObject);
-        AttackTarget ();
-        if (_target == null) { // run a la base ennemie
-            GoToNextStepPath ();
-            CheckForNextStepPath ();
+    void Update ()
+    {
+        if (_order == Order.Idle)
+        {
+            if (_targets.Count == 0 || Vector3.Distance(this.transform.position, _positionBeforeTarget) >= 100f)
+            {
+                Reset();
+            }
+            if(Vector3.Distance(this.transform.position, _positionBeforeTarget ) < 1f)
+            {
+                _hp = _initialhp;
+                _reset = false;
+            }
         }
-        // decremente temps avant prochaine attaque dispo
-        _timeBeforeAttack -= (_timeBeforeAttack - Time.deltaTime > -1f ? Time.deltaTime : 0f);
-        _lifeText.SetText (_hp.ToString ());
+        if (_order == Order.Attack)
+        {
+            if (_targets.Count == 0)
+            {
+                Debug.Log("On va au prochain point");
+                GoToNextStepPath ();
+                CheckForNextStepPath ();
+            }
+        }
+        
+        
 
+        if (!_reset)
+        {
+            if (_targets.Count > 0)
+            {
+                Debug.Log("Il y a plein de target : " + _targets.Count);
+                _target = _targets[0];
+            }
+            if (_target != null)
+            {
+                if (_target.tag == "Ennemy")
+                {
+                    targetInSightRange = Physics.CheckSphere(transform.position, _sightRange, whatIsTargetable);
+                    targetInAttackRange = Physics.CheckSphere(transform.position, _attackRange, whatIsTargetable);
+                }
+
+                if (!alreadyAttacked)
+                {
+                    if (targetInSightRange && !targetInAttackRange) ChaseTarget();
+                    if (targetInSightRange && targetInAttackRange) AttackTarget();
+                }
+            
+            }
+
+            if (_target == null && _targets.Count > 0)
+            {
+                _targets.RemoveAll(x => x == null);
+                _target = _targets[0];
+            }
+        }
+
+    }
+
+    private void ChaseTarget()
+    {
+        Debug.Log("je cours vers ma cible");
+        _agent.SetDestination(_target.transform.position);
+    }
+
+    private void AttackTarget()
+    {
+        Debug.Log("je commence a attaquer ma cible");
+        _agent.SetDestination(transform.position);
+        transform.LookAt(_target.transform);
+        if (_melee)
+        {
+            Debug.Log("j'attaque ma cible en melee");
+            Debug.Log("ma cible c'est :" + _target.ToString());
+            if (_target.tag == "Ennemy")
+            {
+                _target.GetComponent<EnnemyIA>().TakeDamage(_damage);
+            }
+
+
+        }
+        else
+        {
+            Fireball();
+        }
+        if (!alreadyAttacked)
+        {
+            Debug.Log("je suis fatigué je me repose avant la prochaine attaque");
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), 1f/_attackSpeed);
+        }
+    }
+
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
+    }
+
+    private void Reset()
+    {
+        _agent.SetDestination(_positionBeforeTarget);
+        _reset = true;
     }
 
     private void GoToNextStepPath () {
         _agent.stoppingDistance = 1f;
         _agent.destination = _path[_indexPath].position;
     }
-    
     private void CheckForNextStepPath () {
         if (Vector3.Distance (transform.position, _path[_indexPath].position) <= 5f) {
             _indexPath++;
@@ -62,51 +163,44 @@ public class AllyIA : MonoBehaviour {
         }
     }
 
-    private Transform FindTarget () {
-        if (_targets.Count == 0)
-            return null;
-        _targets.RemoveAll (item => item == null);
-        if (_targets.Count <= 0)
-            return null;
-        return _targets[0]; // Add intelligent targeting;
-    }
-
     public void AddTarget (Transform newTarget) {
-        _targets.Add (newTarget);
+        _targets.Add (newTarget.gameObject);
+        Debug.Log("add Target");
     }
     public void RemoveTarget (Transform target) {
-        if (_targets.Contains (target))
-            _targets.Remove (target);
+        if (_targets.Contains (target.gameObject))
+            _targets.Remove (target.gameObject);
+        
+        Debug.Log("target removed");
     }
-
-    private void AttackTarget () {
-
-        if (_target != null && Vector3.Distance (transform.position, _target.transform.position) <= _range && _timeBeforeAttack <= 0f) {
-            if (_melee) {
-                 _target.GetComponent<EnnemyIA>().TakeDamage (_damage);
-            } else {
-                Fireball ();
-            }
-            _timeBeforeAttack = _attackSpeed;
-        }
-    }
+    
     private void Fireball () {
         GameObject tmp = Instantiate (_fireball, transform.position, Quaternion.identity);
         tmp.GetComponent<Projectile> ()._target = _target;
         tmp.GetComponent<Projectile> ()._damage = _damage;
     }
 
-    public void SetupNewTarget (GameObject target) {
-        if (_target == null) {
-            _target = target;
-            _agent.stoppingDistance = _range;
-            _agent.destination = _target.transform.position;
-        }
-    }
-
     public void TakeDamage (float damage) {
         _hp -= damage;
+        _damageParticle.Play();
         if (_hp <= 0f)
             Destroy (this.gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Ennemy" || other.gameObject.tag == "Player")
+        {
+            AddTarget(other.transform);
+        }
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Ennemy" || other.gameObject.tag == "Player")
+        {
+            RemoveTarget(other.transform);
+        }
     }
 }
